@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const accountData = fs.readFileSync(
+const accounts = fs.readFileSync(
     path.join(__dirname, 'json', 'accounts.json'), 'utf8'
 );
 
-const userData = fs.readFileSync(
+const users = fs.readFileSync(
     path.join(__dirname, 'json', 'users.json'), 'utf8'
 );
 
@@ -14,4 +14,4 @@ const writeJSON = () => {
     fs.writeFileSync(path.join(__dirname, 'json/accounts.json'), accountsJSON, 'utf8');
 };
 
-module.exports = { userData, accountData, writeJSON }
+module.exports = { accounts, users, writeJSON }
