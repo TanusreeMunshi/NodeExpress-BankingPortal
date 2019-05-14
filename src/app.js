@@ -23,7 +23,7 @@ app.get('/', (req, res) => res.render('index', { title: 'Account Summary', accou
 
 app.use('/account',accountRoutes);
 
-app.use('/serivces',servicesRoutes);
+app.use('/services',servicesRoutes);
 
 app.get('/profile', (req, res) => res.render('profile', { user: users[0] }));
 
