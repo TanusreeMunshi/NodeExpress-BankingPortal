@@ -11,9 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
-const accounts = JSON.parse(accountData);
 
-const users = JSON.parse(userData);
 app.get('/', (req, res) => res.render('index', { title: 'Account Summary', accounts }));
 app.get('/savings', (req, res) => res.render('account', { account: accounts.savings }));
 app.get('/checking', (req, res) => res.render('account', { account: accounts.checking }));
